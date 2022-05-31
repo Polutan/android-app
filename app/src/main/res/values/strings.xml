@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">Polutan App</string>
+    <string name="polutan">POLUTAN</string>
+    <string name="sub_title">Login ke akun POLUTAN Anda</string>
+    <string name="name">Name</string>
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+    <string name="lupa_password">Lupa password?</string>
+    <string name="login">Login</string>
+    <string name="belum_punya_akun">Belum punya akun ?</string>
+    <string name="register">Register</string>
+    <string name="sub_title_register">Buat akun POLUTAN sekarang</string>
+    <string name="full_name">Nama Lengkap</string>
+    <string name="phone_number">No. Telp</string>
+    <string name="have_account">Sudah Punya Akun?</string>
+</resources>
