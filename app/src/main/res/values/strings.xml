@@ -13,4 +13,18 @@
     <string name="full_name">Nama Lengkap</string>
     <string name="phone_number">No. Telp</string>
     <string name="have_account">Sudah Punya Akun?</string>
+    <string name="your_current_location">Lokasimu saat ini</string>
+    <string name="detail_current_location">Jalan K.H. Wahid Hasyim</string>
+    <string name="district_current_location">Jakarta Pusat, Indonesia</string>
+    <string name="current_aqi">41</string>
+    <string name="aqi">AQI</string>
+    <string name="current_name_aqi">Moderate</string>
+    <string name="pm25">PM2.5</string>
+    <string name="current_pm25">32µg/m³</string>
+    <string name="how_to_prevenet">Bagaimana cara melindungi diri\ndari polusi udara yang buruk?</string>
+    <string name="use_mask">Gunakan\nMasker</string>
+    <string name="user_air_purifier">Gunakan\nAir Purifier</string>
+    <string name="use_sun_sreen">Gunakan\nSunScreen</string>
+    <string name="close_window">Tutup Jendela\nRumah</string>
+    <string name="dont_go_out">Hindari Aktivitas\nLuar Rumah</string>
 </resources>
