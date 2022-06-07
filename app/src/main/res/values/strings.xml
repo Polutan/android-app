@@ -27,4 +27,13 @@
     <string name="use_sun_sreen">Gunakan\nSunScreen</string>
     <string name="close_window">Tutup Jendela\nRumah</string>
     <string name="dont_go_out">Hindari Aktivitas\nLuar Rumah</string>
+    <string name="another_city">Kota Lainnya</string>
+    <string name="list_all_city">Lihat Semua</string>
+    <string name="city_name">Jakarta Barat</string>
+    <string name="time">2 menit yang lalu</string>
+    <string name="title_home">Home</string>
+    <string name="title_air_quality">Air Quality</string>
+    <string name="title_about_us">About Us</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>
