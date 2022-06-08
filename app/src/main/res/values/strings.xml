@@ -34,6 +34,19 @@
     <string name="title_home">Home</string>
     <string name="title_air_quality">Air Quality</string>
     <string name="title_about_us">About Us</string>
+    <string name="title_setting">Setting</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="aqi_guide">AQI Guide</string>
+    <string name="category_good">0 - 50 Good</string>
+    <string name="description_category_good">Air Quality is satisfaction and poses\nlittle or no risk. Ventilating your home is\nrecommended</string>
+    <string name="category_moderate">51 - 100 Moderate</string>
+    <string name="description_moderate">Sensitive individuals should avoid outdoor\nactivity as they may experience respiratory\nsymptoms</string>
+    <string name="category_unhealthy_for_sensitive_groups">101 - 105 Unhealthy for sensitive groups</string>
+    <string name="description_unhealthy_for_sensitive_groups">General public and sensitive individuals in\nparticular are at risk to experience irritation\nand respiratory problems.</string>
+    <string name="category_unhealthy">151 - 200 Unhealthy</string>
+    <string name="description_unhealthy">Increased likelihood of advese affects and\naggravation to the heart and lungs among\ngeneral public - particulary for sensitivie\ngroups.</string>
+    <string name="category_very_unhealthy">201 - 300 Very Unhealthy</string>
+    <string name="what_is_polutan">What is Polutan ?</string>
+    <string name="about_us_description">Polutan or Air Quality prediction/forecast application \nis an mobile android application that we have created to help\nusers know the level of air quality, so they can prepare\nthemselves for protection against it. Departing from our\nawareness of the importance or number of outdoor\nactivities that require the body to be in an open environment,\ntherefore it is very important to know the level of air quality in the environment, such as masks, skin products(such us sunscreen, etc), and others. On the main page the application can display and predict the level of air pollution in a particular city\'s air quality history. In addition to displaying the level of air pollution, it also displays the air quality index(number value of the air quality index, i.e 0 - 500) and the main pollutant (main pollution type e.g PM2.5); displays today\'s air quality forecast, and displays health recommendations (e.g close window if the air quality is unhealthy, enjoy outdoor activities,etc).</string>
 </resources>
