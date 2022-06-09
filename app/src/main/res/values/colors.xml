@@ -11,4 +11,6 @@
     <color name="gray_for_underline">#D8D6D6</color>
     <color name="gray_2">#474749</color>
     <color name="gray_3">#9C9C9C</color>
+    <color name="red">#FF0000</color>
+    <color name="orange">#EC5F40</color>
 </resources>

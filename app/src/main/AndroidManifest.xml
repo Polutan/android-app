@@ -14,10 +14,13 @@
         android:theme="@style/Theme.PolutanApp"
         tools:targetApi="31">
         <activity
-            android:name=".SettingActivity"
+            android:name=".ui.ResetPasswordActivity"
             android:exported="false" />
         <activity
-            android:name=".ListAllCityActivity"
+            android:name=".ui.SettingActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.ListAllCityActivity"
             android:exported="false"
             android:label="@string/title_activity_list_all_city"
             android:theme="@style/Theme.PolutanApp.NoActionBar" />
