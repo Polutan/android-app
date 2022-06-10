@@ -1,5 +1,6 @@
 package com.example.polutanapp.network
 
+import com.example.polutanapp.model.UserModel
 import com.example.polutanapp.response.SavedUser
 import retrofit2.Call
 import retrofit2.http.Field
@@ -15,4 +16,11 @@ interface ApiService {
         @Field("email") email: String,
         @Field("password") password: String
     ): Call<SavedUser>
+
+    @FormUrlEncoded
+    @POST("login")
+    fun login(
+        @Field("email") email: String,
+        @Field("password") password: String
+    ): Call<UserModel>
 }

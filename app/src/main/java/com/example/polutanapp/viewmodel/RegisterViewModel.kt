@@ -6,7 +6,6 @@ import com.example.polutanapp.data.Resource
 import com.example.polutanapp.model.UserModel
 import com.example.polutanapp.model.UserPreference
 import com.example.polutanapp.network.ApiConfig
-import com.example.polutanapp.response.RegisterResponse
 import com.example.polutanapp.response.SavedUser
 import kotlinx.coroutines.launch
 import retrofit2.Call

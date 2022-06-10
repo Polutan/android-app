@@ -29,6 +29,18 @@ class UserPreference private constructor(private val dataStore: DataStore<Prefer
         }
     }
 
+    suspend fun login() {
+        dataStore.edit { preferences ->
+            preferences[STATUS_KEY] = 200
+        }
+    }
+
+    suspend fun logout() {
+        dataStore.edit { preferences ->
+            preferences[STATUS_KEY] = 400
+        }
+    }
+
 
     companion object {
         @Volatile

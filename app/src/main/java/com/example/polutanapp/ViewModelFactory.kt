@@ -3,6 +3,7 @@ package com.example.polutanapp
 import androidx.lifecycle.ViewModel
 import com.example.polutanapp.model.UserPreference
 import androidx.lifecycle.ViewModelProvider
+import com.example.polutanapp.viewmodel.LoginViewModel
 import com.example.polutanapp.viewmodel.RegisterViewModel
 
 //import com.example.mystoryapp.models.UserPreference
@@ -20,9 +21,9 @@ class ViewModelFactory(
             modelClass.isAssignableFrom(RegisterViewModel::class.java) -> {
                 RegisterViewModel(pref) as T
             }
-//            modelClass.isAssignableFrom(RegisterViewModel::class.java) -> {
-//                RegisterViewModel(pref) as T
-//            }
+            modelClass.isAssignableFrom(LoginViewModel::class.java) -> {
+                LoginViewModel(pref) as T
+            }
 //            modelClass.isAssignableFrom(LoginViewModel::class.java) -> {
 //                LoginViewModel(pref) as T
 //            }
