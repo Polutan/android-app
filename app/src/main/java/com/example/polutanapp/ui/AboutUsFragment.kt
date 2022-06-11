@@ -1,5 +1,6 @@
 package com.example.polutanapp.ui
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.*
 import androidx.fragment.app.Fragment
@@ -30,13 +31,21 @@ class AboutUsFragment : Fragment() {
 
         binding.toolbarAboutUs.setNavigationIcon(R.drawable.icon_back)
         binding.toolbarAboutUs.setNavigationOnClickListener {
-
+            val mHomeFragment = HomeFragment()
+            val mFragmentManager = parentFragmentManager
+            mFragmentManager.beginTransaction().apply {
+                replace(R.id.fragment_about_us, mHomeFragment, HomeFragment::class.java.simpleName)
+//                addToBackStack(null)
+                commit()
+            }
         }
 
             binding.toolbarAboutUs.inflateMenu(R.menu.option_menu)
             binding.toolbarAboutUs.setOnMenuItemClickListener {
                 when(it.itemId) {
                     R.id.setting -> {
+                        val intent = Intent(context, SettingActivity::class.java)
+                        startActivity(intent)
                         true
                     }
                     else -> {
@@ -46,6 +55,10 @@ class AboutUsFragment : Fragment() {
 
             }
     }
+
+//    override fun onClick(v: View) {
+////        if (v.id == binding.toolbarAboutUs.)
+//    }
 
     override fun onCreateOptionsMenu(menu: Menu, inflater: MenuInflater) {
         super.onCreateOptionsMenu(menu, inflater)
