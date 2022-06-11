@@ -51,7 +51,11 @@
             android:layout_marginTop="43dp"
             android:layout_marginEnd="16dp"
             android:hint="@string/email"
+            app:hintTextColor="@color/black"
             app:endIconMode="clear_text"
+            android:textColorHint="@color/gray_3"
+            app:boxStrokeColor="@color/black"
+            app:endIconTint="@color/gray_3"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent">
@@ -60,6 +64,7 @@
                 android:id="@+id/textInputEdiTextEmail"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:textColor="@color/black"
                 android:inputType="textEmailAddress" />
         </com.google.android.material.textfield.TextInputLayout>
 
@@ -72,6 +77,9 @@
             android:layout_marginTop="16dp"
             android:layout_marginEnd="16dp"
             android:hint="@string/password"
+            android:textColorHint="@color/gray_3"
+            app:boxStrokeColor="@color/black"
+            app:endIconTint="@color/gray_3"
             app:endIconMode="password_toggle"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -81,6 +89,7 @@
                 android:id="@+id/textInputEdiTextPassword"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:textColor="@color/black"
                 android:inputType="textPassword" />
         </com.google.android.material.textfield.TextInputLayout>
 
@@ -91,6 +100,7 @@
             android:layout_marginStart="16dp"
             android:layout_marginTop="16dp"
             android:text="@string/lupa_password"
+            android:textColor="@color/gray_3"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/texInputLayoutPassword" />
 
@@ -102,6 +112,7 @@
             android:layout_marginTop="16dp"
             android:layout_marginEnd="16dp"
             android:text="@string/login"
+            android:textColor="@color/white"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/tv_lupa_password" />
 
@@ -112,6 +123,7 @@
             android:layout_marginStart="16dp"
             android:layout_marginTop="8dp"
             android:text="@string/belum_punya_akun"
+            android:textColor="@color/gray_3"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/btn_login" />
 

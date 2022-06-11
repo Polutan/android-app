@@ -157,7 +157,7 @@
         android:layout_marginTop="13dp"
         android:fontFamily="@font/roboto_semi_bold"
         android:text="@string/how_to_prevenet"
-        android:textColor="@color/black"
+        android:textColor="?android:textColorPrimary"
         android:textSize="20sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/constraintLayout" />
@@ -193,7 +193,7 @@
                 android:fontFamily="@font/roboto_medium"
                 android:text="@string/use_mask"
                 android:textAlignment="center"
-                android:textColor="@color/black"
+                android:textColor="?android:textColorPrimary"
                 android:textSize="11sp"
                 app:layout_constraintStart_toStartOf="@+id/image_menu_one"
                 app:layout_constraintTop_toBottomOf="@+id/image_menu_one" />
@@ -215,7 +215,7 @@
                 android:fontFamily="@font/roboto_medium"
                 android:text="@string/user_air_purifier"
                 android:textAlignment="center"
-                android:textColor="@color/black"
+                android:textColor="?android:textColorPrimary"
                 android:textSize="11sp"
                 app:layout_constraintStart_toStartOf="@+id/image_menu_two"
                 app:layout_constraintTop_toBottomOf="@+id/image_menu_two" />
@@ -237,7 +237,7 @@
                 android:fontFamily="@font/roboto_medium"
                 android:text="@string/use_sun_sreen"
                 android:textAlignment="center"
-                android:textColor="@color/black"
+                android:textColor="?android:textColorPrimary"
                 android:textSize="11sp"
                 app:layout_constraintStart_toStartOf="@+id/image_menu_three"
                 app:layout_constraintTop_toBottomOf="@+id/image_menu_three" />
@@ -258,7 +258,7 @@
                 android:layout_marginTop="5dp"
                 android:fontFamily="@font/roboto_medium"
                 android:text="@string/close_window"
-                android:textColor="@color/black"
+                android:textColor="?android:textColorPrimary"
                 android:textSize="11sp"
                 app:layout_constraintStart_toStartOf="@+id/image_menu_four"
                 app:layout_constraintTop_toBottomOf="@+id/image_menu_four" />
@@ -279,7 +279,7 @@
                 android:layout_marginTop="5dp"
                 android:fontFamily="@font/roboto_medium"
                 android:text="@string/dont_go_out"
-                android:textColor="@color/black"
+                android:textColor="?android:textColorPrimary"
                 android:textSize="11sp"
                 app:layout_constraintStart_toStartOf="@+id/image_menu_five"
                 app:layout_constraintTop_toBottomOf="@+id/image_menu_five" />
@@ -306,7 +306,7 @@
         android:layout_marginTop="16dp"
         android:fontFamily="@font/roboto_medium"
         android:text="@string/another_city"
-        android:textColor="@color/black"
+        android:textColor="?android:textColorPrimary"
         android:textSize="15sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/view_underline" />

@@ -13,4 +13,7 @@
     <color name="gray_3">#9C9C9C</color>
     <color name="red">#FF0000</color>
     <color name="orange">#EC5F40</color>
+    <color name="navy_700">#1D2D50</color>
+    <color name="navy_500">#133B5C</color>
+    <color name="navy_200">#1E5F74</color>
 </resources>
