@@ -4,7 +4,9 @@ import android.content.Context
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.widget.CompoundButton
 import androidx.appcompat.app.AlertDialog
+import androidx.appcompat.app.AppCompatDelegate
 import androidx.datastore.core.DataStore
 import androidx.datastore.preferences.core.Preferences
 import androidx.datastore.preferences.preferencesDataStore
@@ -13,16 +15,14 @@ import com.example.polutanapp.R
 import com.example.polutanapp.ViewModelFactory
 import com.example.polutanapp.databinding.ActivitySettingBinding
 import com.example.polutanapp.model.UserPreference
-import com.example.polutanapp.viewmodel.LoginViewModel
-import com.example.polutanapp.viewmodel.RegisterViewModel
+import com.example.polutanapp.viewmodel.SettingViewModel
 
 private val Context.dataStore: DataStore<Preferences> by preferencesDataStore(name = "settings")
-
 
 class SettingActivity : AppCompatActivity() {
 
     private lateinit var settingBinding: ActivitySettingBinding
-    private lateinit var viewModel: RegisterViewModel
+    private lateinit var viewModel: SettingViewModel
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -47,7 +47,23 @@ class SettingActivity : AppCompatActivity() {
         viewModel = ViewModelProvider(
             this,
             ViewModelFactory(UserPreference.getInstance(dataStore))
-        )[RegisterViewModel::class.java]
+        )[SettingViewModel::class.java]
+
+        val switchTheme = settingBinding.switchTheme
+
+        viewModel.getThemeSettings().observe(this, { isDarkModeActive: Boolean ->
+            if (isDarkModeActive) {
+                AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES)
+                switchTheme.isChecked = true
+            } else {
+                AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO)
+                switchTheme.isChecked = false
+            }
+        })
+
+        switchTheme.setOnCheckedChangeListener { _: CompoundButton?, isChecked: Boolean ->
+            viewModel.saveThemeSetting(isChecked)
+        }
 
         settingBinding.tvLogOut.setOnClickListener {
             AlertDialog.Builder(this).apply {

@@ -27,12 +27,6 @@ class RegisterViewModel(private val pref: UserPreference) : ViewModel() {
         }
     }
 
-    fun logout() {
-        viewModelScope.launch {
-            pref.logout()
-        }
-    }
-
     fun register(name: String, email: String, password: String): LiveData<Resource<Boolean>> {
         val register = MutableLiveData<Resource<Boolean>>()
         register.value = Resource.Loading

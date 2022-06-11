@@ -1,11 +1,8 @@
 package com.example.polutanapp.model
 
 import androidx.datastore.core.DataStore
-import androidx.datastore.preferences.core.intPreferencesKey
-import androidx.datastore.preferences.core.stringPreferencesKey
+import androidx.datastore.preferences.core.*
 import kotlinx.coroutines.flow.map
-import androidx.datastore.preferences.core.Preferences
-import androidx.datastore.preferences.core.edit
 import kotlinx.coroutines.flow.Flow
 
 
@@ -16,7 +13,7 @@ class UserPreference private constructor(private val dataStore: DataStore<Prefer
             UserModel(
                 preferences[TOKEN_KEY] ?: "",
                 preferences[STATUS_KEY] ?: 0,
-                preferences[MESSAGE_KEY] ?:""
+                preferences[MESSAGE_KEY] ?: ""
             )
         }
     }
@@ -42,6 +39,18 @@ class UserPreference private constructor(private val dataStore: DataStore<Prefer
         }
     }
 
+    fun getThemeSetting(): Flow<Boolean> {
+        return dataStore.data.map { preferences ->
+            preferences[THEME_KEY] ?: false
+        }
+    }
+
+    suspend fun saveThemeSetting(isDarkModeActive: Boolean) {
+        dataStore.edit { preferences ->
+            preferences[THEME_KEY] = isDarkModeActive
+        }
+    }
+
 
     companion object {
         @Volatile
@@ -50,9 +59,10 @@ class UserPreference private constructor(private val dataStore: DataStore<Prefer
         private val TOKEN_KEY = stringPreferencesKey("token")
         private val STATUS_KEY = intPreferencesKey("status")
         private val MESSAGE_KEY = stringPreferencesKey("message")
+        private val THEME_KEY = booleanPreferencesKey("theme_setting")
 
-        fun getInstance(dataStore: DataStore<Preferences>): UserPreference{
-            return INSTANCE ?: synchronized(this){
+        fun getInstance(dataStore: DataStore<Preferences>): UserPreference {
+            return INSTANCE ?: synchronized(this) {
                 val instance = UserPreference(dataStore)
                 INSTANCE = instance
                 instance

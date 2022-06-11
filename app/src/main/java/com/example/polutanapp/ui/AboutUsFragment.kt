@@ -40,25 +40,21 @@ class AboutUsFragment : Fragment() {
             }
         }
 
-            binding.toolbarAboutUs.inflateMenu(R.menu.option_menu)
-            binding.toolbarAboutUs.setOnMenuItemClickListener {
-                when(it.itemId) {
-                    R.id.setting -> {
-                        val intent = Intent(context, SettingActivity::class.java)
-                        startActivity(intent)
-                        true
-                    }
-                    else -> {
-                        super.onOptionsItemSelected(it)
-                    }
+        binding.toolbarAboutUs.inflateMenu(R.menu.option_menu)
+        binding.toolbarAboutUs.setOnMenuItemClickListener {
+            when (it.itemId) {
+                R.id.setting -> {
+                    val intent = Intent(context, SettingActivity::class.java)
+                    startActivity(intent)
+                    true
                 }
-
+                else -> {
+                    super.onOptionsItemSelected(it)
+                }
             }
-    }
 
-//    override fun onClick(v: View) {
-////        if (v.id == binding.toolbarAboutUs.)
-//    }
+        }
+    }
 
     override fun onCreateOptionsMenu(menu: Menu, inflater: MenuInflater) {
         super.onCreateOptionsMenu(menu, inflater)

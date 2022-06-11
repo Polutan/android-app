@@ -8,6 +8,7 @@ import android.os.Bundle
 import android.os.Handler
 import android.view.WindowInsets
 import android.view.WindowManager
+import androidx.appcompat.app.AppCompatDelegate
 import androidx.datastore.core.DataStore
 import androidx.datastore.preferences.core.Preferences
 import androidx.datastore.preferences.preferencesDataStore
@@ -15,6 +16,7 @@ import androidx.lifecycle.ViewModelProvider
 import com.example.polutanapp.R
 import com.example.polutanapp.ViewModelFactory
 import com.example.polutanapp.model.UserPreference
+import com.example.polutanapp.viewmodel.SettingViewModel
 import com.example.polutanapp.viewmodel.SplashViewModel
 
 private val Context.dataStore: DataStore<Preferences> by preferencesDataStore(name = "settings")
@@ -54,6 +56,20 @@ class SplashActivity : AppCompatActivity() {
     }
 
     private fun setUpAction() {
+
+        val pref = UserPreference.getInstance(dataStore)
+        val settingViewModel = ViewModelProvider(this, ViewModelFactory(pref)).get(
+            SettingViewModel::class.java
+        )
+
+        settingViewModel.getThemeSettings().observe(this, { isDarkModeActive: Boolean ->
+            if (isDarkModeActive) {
+                AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES)
+            } else {
+                AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO)
+            }
+        })
+
         handler = Handler(mainLooper)
         handler.postDelayed({
             splashViewModel.getUser().observe(this) {
