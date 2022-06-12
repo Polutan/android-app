@@ -1,5 +1,6 @@
 ##POLUTAN
 This application will inform you about current air quality or next day air quality
+<br>
 
 #OVERVIEW
 <img src="https://github.com/Polutan/android-app/blob/main/readme_asset/1.png" width=auto height=400 align="left"/>
