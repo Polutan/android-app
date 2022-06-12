@@ -29,5 +29,8 @@ data class SavedUser(
 	val id: String,
 
 	@field:SerializedName("email")
-	val email: String
+	val email: String,
+
+	@field:SerializedName("score")
+	val score: Int
 )

@@ -37,7 +37,6 @@ class AboutUsFragment : Fragment() {
                 replace(R.id.fragment_about_us, mHomeFragment, HomeFragment::class.java.simpleName)
 //                addToBackStack(null)
                 commit()
-                activity?.finish()
             }
         }
 

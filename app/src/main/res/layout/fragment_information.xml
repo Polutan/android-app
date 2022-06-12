@@ -1,193 +1,201 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_height="wrap_content"
     tools:context=".ui.InformationFragment"
-    android:background="@drawable/shape_information">
+    android:fillViewport="true">
 
-    <TextView
-        android:id="@+id/tv_aqi_guide"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/aqi_guide"
-        android:layout_marginTop="31dp"
-        android:textSize="23sp"
-        android:fontFamily="@font/roboto_bold"
-        android:textColor="@color/gray_2"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:background="@drawable/shape_information"
+        android:layout_height="wrap_content">
 
-    <ImageView
-        android:id="@+id/image_backspace"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:src="@drawable/icon_backspace"
-        android:layout_marginTop="6dp"
-        android:layout_marginStart="16dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/tv_aqi_guide" />
+        <TextView
+            android:id="@+id/tv_aqi_guide"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/aqi_guide"
+            android:layout_marginTop="31dp"
+            android:textSize="23sp"
+            android:fontFamily="@font/roboto_bold"
+            android:textColor="@color/gray_2"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
-    <ImageView
-        android:id="@+id/image_good"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:src="@drawable/icon_menu_one"
-        android:layout_marginTop="25dp"
-        android:layout_marginStart="40dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/image_backspace" />
+        <ImageView
+            android:id="@+id/image_backspace"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/icon_backspace"
+            android:layout_marginTop="6dp"
+            android:layout_marginStart="16dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/tv_aqi_guide" />
 
-    <TextView
-        android:id="@+id/tv_good"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/category_good"
-        android:textColor="@color/black"
-        android:textSize="14sp"
-        android:fontFamily="@font/roboto_medium"
-        android:layout_marginStart="32dp"
-        app:layout_constraintStart_toEndOf="@+id/image_good"
-        app:layout_constraintTop_toTopOf="@+id/image_good" />
+        <ImageView
+            android:id="@+id/image_good"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/icon_menu_one"
+            android:layout_marginTop="25dp"
+            android:layout_marginStart="40dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/image_backspace" />
 
-    <TextView
-        android:id="@+id/tv_description_good"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:fontFamily="@font/roboto_reguler"
-        android:text="@string/description_category_good"
-        android:textColor="@color/black"
-        app:layout_constraintStart_toStartOf="@+id/tv_good"
-        app:layout_constraintTop_toBottomOf="@+id/tv_good" />
+        <TextView
+            android:id="@+id/tv_good"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/category_good"
+            android:textColor="@color/black"
+            android:textSize="14sp"
+            android:fontFamily="@font/roboto_medium"
+            android:layout_marginStart="32dp"
+            app:layout_constraintStart_toEndOf="@+id/image_good"
+            app:layout_constraintTop_toTopOf="@+id/image_good" />
 
-    <ImageView
-        android:id="@+id/image_moderate"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="40dp"
-        android:layout_marginTop="50dp"
-        android:src="@drawable/icon_category_moderate"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/image_good" />
+        <TextView
+            android:id="@+id/tv_description_good"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/roboto_reguler"
+            android:text="@string/description_category_good"
+            android:textColor="@color/black"
+            app:layout_constraintStart_toStartOf="@+id/tv_good"
+            app:layout_constraintTop_toBottomOf="@+id/tv_good" />
 
-    <TextView
-        android:id="@+id/tv_moderate"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:fontFamily="@font/roboto_medium"
-        android:text="@string/category_moderate"
-        android:layout_marginStart="32dp"
-        android:textColor="@color/black"
-        android:textSize="14sp"
-        app:layout_constraintStart_toEndOf="@+id/image_moderate"
-        app:layout_constraintTop_toTopOf="@+id/image_moderate" />
+        <ImageView
+            android:id="@+id/image_moderate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="40dp"
+            android:layout_marginTop="50dp"
+            android:src="@drawable/icon_category_moderate"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/image_good" />
 
-    <TextView
-        android:id="@+id/tv_description_moderate"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:fontFamily="@font/roboto_reguler"
-        android:text="@string/description_moderate"
-        android:textColor="@color/black"
-        app:layout_constraintStart_toStartOf="@+id/tv_moderate"
-        app:layout_constraintTop_toBottomOf="@+id/tv_moderate" />
+        <TextView
+            android:id="@+id/tv_moderate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/roboto_medium"
+            android:text="@string/category_moderate"
+            android:layout_marginStart="32dp"
+            android:textColor="@color/black"
+            android:textSize="14sp"
+            app:layout_constraintStart_toEndOf="@+id/image_moderate"
+            app:layout_constraintTop_toTopOf="@+id/image_moderate" />
 
-    <ImageView
-        android:id="@+id/image_unhealthy_for_sensitive_groups"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="40dp"
-        android:layout_marginTop="50dp"
-        android:src="@drawable/icon_category_unhealthy_for_"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/image_moderate" />
+        <TextView
+            android:id="@+id/tv_description_moderate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/roboto_reguler"
+            android:text="@string/description_moderate"
+            android:textColor="@color/black"
+            app:layout_constraintStart_toStartOf="@+id/tv_moderate"
+            app:layout_constraintTop_toBottomOf="@+id/tv_moderate" />
 
-    <TextView
-        android:id="@+id/tv_unhealthy_for_sensitive_groups"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:fontFamily="@font/roboto_medium"
-        android:text="@string/category_unhealthy_for_sensitive_groups"
-        android:textColor="@color/black"
-        android:layout_marginStart="32dp"
-        android:textSize="14sp"
-        app:layout_constraintStart_toEndOf="@+id/image_unhealthy_for_sensitive_groups"
-        app:layout_constraintTop_toTopOf="@+id/image_unhealthy_for_sensitive_groups" />
+        <ImageView
+            android:id="@+id/image_unhealthy_for_sensitive_groups"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="40dp"
+            android:layout_marginTop="50dp"
+            android:src="@drawable/icon_category_unhealthy_for_"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/image_moderate" />
 
-    <TextView
-        android:id="@+id/tv_description_unhealthy_for_sensitive_groups"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:fontFamily="@font/roboto_reguler"
-        android:text="@string/description_unhealthy_for_sensitive_groups"
-        android:textColor="@color/black"
-        app:layout_constraintStart_toStartOf="@+id/tv_unhealthy_for_sensitive_groups"
-        app:layout_constraintTop_toBottomOf="@+id/tv_unhealthy_for_sensitive_groups" />
+        <TextView
+            android:id="@+id/tv_unhealthy_for_sensitive_groups"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/roboto_medium"
+            android:text="@string/category_unhealthy_for_sensitive_groups"
+            android:textColor="@color/black"
+            android:layout_marginStart="32dp"
+            android:textSize="14sp"
+            app:layout_constraintStart_toEndOf="@+id/image_unhealthy_for_sensitive_groups"
+            app:layout_constraintTop_toTopOf="@+id/image_unhealthy_for_sensitive_groups" />
 
-    <ImageView
-        android:id="@+id/image_unhealthy"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="40dp"
-        android:layout_marginTop="50dp"
-        android:src="@drawable/icon_category_unhealthy"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/image_unhealthy_for_sensitive_groups" />
+        <TextView
+            android:id="@+id/tv_description_unhealthy_for_sensitive_groups"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/roboto_reguler"
+            android:text="@string/description_unhealthy_for_sensitive_groups"
+            android:textColor="@color/black"
+            app:layout_constraintStart_toStartOf="@+id/tv_unhealthy_for_sensitive_groups"
+            app:layout_constraintTop_toBottomOf="@+id/tv_unhealthy_for_sensitive_groups" />
 
-    <TextView
-        android:id="@+id/tv_unhealthy"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:fontFamily="@font/roboto_medium"
-        android:text="@string/category_unhealthy"
-        android:textColor="@color/black"
-        android:layout_marginStart="32dp"
-        android:textSize="14sp"
-        app:layout_constraintStart_toEndOf="@+id/image_unhealthy"
-        app:layout_constraintTop_toTopOf="@+id/image_unhealthy" />
+        <ImageView
+            android:id="@+id/image_unhealthy"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="40dp"
+            android:layout_marginTop="50dp"
+            android:src="@drawable/icon_category_unhealthy"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/image_unhealthy_for_sensitive_groups" />
 
-    <TextView
-        android:id="@+id/tv_description_unhealthy"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:fontFamily="@font/roboto_reguler"
-        android:text="@string/description_unhealthy"
-        android:textColor="@color/black"
-        app:layout_constraintStart_toStartOf="@+id/tv_unhealthy"
-        app:layout_constraintTop_toBottomOf="@+id/tv_unhealthy" />
+        <TextView
+            android:id="@+id/tv_unhealthy"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/roboto_medium"
+            android:text="@string/category_unhealthy"
+            android:textColor="@color/black"
+            android:layout_marginStart="32dp"
+            android:textSize="14sp"
+            app:layout_constraintStart_toEndOf="@+id/image_unhealthy"
+            app:layout_constraintTop_toTopOf="@+id/image_unhealthy" />
 
-    <ImageView
-        android:id="@+id/image_very_unhealthy"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="40dp"
-        android:layout_marginTop="60dp"
-        android:src="@drawable/icon_category_very_unhealthy"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/image_unhealthy" />
+        <TextView
+            android:id="@+id/tv_description_unhealthy"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/roboto_reguler"
+            android:text="@string/description_unhealthy"
+            android:textColor="@color/black"
+            app:layout_constraintStart_toStartOf="@+id/tv_unhealthy"
+            app:layout_constraintTop_toBottomOf="@+id/tv_unhealthy" />
 
-    <TextView
-        android:id="@+id/tv_very_unhealthy"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:fontFamily="@font/roboto_medium"
-        android:text="@string/category_very_unhealthy"
-        android:textColor="@color/black"
-        android:layout_marginStart="32dp"
-        android:textSize="14sp"
-        app:layout_constraintStart_toEndOf="@+id/image_very_unhealthy"
-        app:layout_constraintTop_toTopOf="@+id/image_very_unhealthy" />
+        <ImageView
+            android:id="@+id/image_very_unhealthy"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="40dp"
+            android:layout_marginTop="60dp"
+            android:src="@drawable/icon_category_very_unhealthy"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/image_unhealthy" />
 
-    <TextView
-        android:id="@+id/tv_description_very_unhealthy"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:fontFamily="@font/roboto_reguler"
-        android:text="General public will be noticeably affected.\nSensitive group will experience reduced\nendurance in activies. These individuals\nshould remain indoors and restrict\nactivities."
-        android:textColor="@color/black"
-        app:layout_constraintStart_toStartOf="@+id/tv_very_unhealthy"
-        app:layout_constraintTop_toBottomOf="@+id/tv_very_unhealthy" />
+        <TextView
+            android:id="@+id/tv_very_unhealthy"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/roboto_medium"
+            android:text="@string/category_very_unhealthy"
+            android:textColor="@color/black"
+            android:layout_marginStart="32dp"
+            android:textSize="14sp"
+            app:layout_constraintStart_toEndOf="@+id/image_very_unhealthy"
+            app:layout_constraintTop_toTopOf="@+id/image_very_unhealthy" />
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+        <TextView
+            android:id="@+id/tv_description_very_unhealthy"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/roboto_reguler"
+            android:text="General public will be noticeably affected.\nSensitive group will experience reduced\nendurance in activies. These individuals\nshould remain indoors and restrict\nactivities."
+            android:textColor="@color/black"
+            app:layout_constraintStart_toStartOf="@+id/tv_very_unhealthy"
+            app:layout_constraintTop_toBottomOf="@+id/tv_very_unhealthy" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</ScrollView>
