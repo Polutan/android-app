@@ -2,6 +2,7 @@ package com.example.polutanapp.model
 
 import androidx.datastore.core.DataStore
 import androidx.datastore.preferences.core.*
+import com.example.polutanapp.response.SavedUser
 import kotlinx.coroutines.flow.map
 import kotlinx.coroutines.flow.Flow
 
@@ -13,7 +14,8 @@ class UserPreference private constructor(private val dataStore: DataStore<Prefer
             UserModel(
                 preferences[TOKEN_KEY] ?: "",
                 preferences[STATUS_KEY] ?: 0,
-                preferences[MESSAGE_KEY] ?: ""
+                preferences[MESSAGE_KEY] ?: "",
+                preferences[SCORE_KEY] ?: 0
             )
         }
     }
@@ -23,6 +25,13 @@ class UserPreference private constructor(private val dataStore: DataStore<Prefer
             preferences[TOKEN_KEY] = user.token
             preferences[STATUS_KEY] = user.status
             preferences[MESSAGE_KEY] = user.message
+            preferences[SCORE_KEY] = user.score
+        }
+    }
+
+    suspend fun savedScoreAQI(savedUser: SavedUser) {
+        dataStore.edit { preferences ->
+            preferences[SCORE_KEY] = savedUser.score
         }
     }
 
@@ -60,6 +69,7 @@ class UserPreference private constructor(private val dataStore: DataStore<Prefer
         private val STATUS_KEY = intPreferencesKey("status")
         private val MESSAGE_KEY = stringPreferencesKey("message")
         private val THEME_KEY = booleanPreferencesKey("theme_setting")
+        private val SCORE_KEY = intPreferencesKey("score")
 
         fun getInstance(dataStore: DataStore<Preferences>): UserPreference {
             return INSTANCE ?: synchronized(this) {

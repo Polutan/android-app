@@ -9,14 +9,13 @@ import androidx.datastore.core.DataStore
 import androidx.datastore.preferences.core.Preferences
 import androidx.datastore.preferences.preferencesDataStore
 import androidx.fragment.app.Fragment
-import androidx.fragment.app.viewModels
 import androidx.lifecycle.ViewModelProvider
 import com.example.polutanapp.R
 import com.example.polutanapp.ViewModelFactory
 import com.example.polutanapp.databinding.FragmentHomeBinding
+import com.example.polutanapp.model.UserModel
 import com.example.polutanapp.model.UserPreference
 import com.example.polutanapp.viewmodel.HomeViewModel
-
 
 private val Context.dataStore: DataStore<Preferences> by preferencesDataStore(name = "settings")
 
@@ -24,22 +23,21 @@ class HomeFragment : Fragment() {
 
     private var _binding: FragmentHomeBinding? = null
     private val binding get() = _binding!!
-    private val homeVieWModel:HomeViewModel by viewModels<HomeViewModel>()
+
+    private lateinit var homeViewModel: HomeViewModel
+    private lateinit var user: UserModel
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
 
     }
+
     private fun setUpViewModel() {
-//        homeViewModel = ViewModelProvider(
-//            this,
-//            ViewModelFactory(UserPreference.getInstance(dataStore))
-//        )[HomeViewModel::class.java]
-
-//        homeViewModel =
-//            ViewModelProvider(requireActivity()).get(HomeViewModel::class.java)
-
+        homeViewModel = ViewModelProvider(
+            this,
+            ViewModelFactory(UserPreference.getInstance(requireActivity().dataStore))
+        )[HomeViewModel::class.java]
     }
 
     override fun onCreateView(
@@ -50,7 +48,6 @@ class HomeFragment : Fragment() {
         val view = binding.root
         return view
 
-
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
@@ -58,10 +55,12 @@ class HomeFragment : Fragment() {
 
         setUpViewModel()
 
-        homeVieWModel.getUser().observe(viewLifecycleOwner, {
+        homeViewModel.getUser().observe(viewLifecycleOwner, {
             if (it.token.isNotEmpty()) {
-                homeVieWModel.getScoreAQI(it.token)
-                binding.tvCurrentAqi.text = homeVieWModel.getListScoreAQI().toString()
+                homeViewModel.getScoreAQI(it.token)
+                this.user = it
+                binding.tvCurrentAqi.text = user.score.toString()
+                textForCategory()
             }
         })
 
@@ -69,10 +68,28 @@ class HomeFragment : Fragment() {
             val mInfoFragment = InformationFragment()
             val mFragmentManager = parentFragmentManager
             mFragmentManager.beginTransaction().apply {
-                replace(R.id.fragment_home, mInfoFragment, InformationFragment::class.java.simpleName)
+                replace(
+                    R.id.fragment_home,
+                    mInfoFragment,
+                    InformationFragment::class.java.simpleName
+                )
                 addToBackStack(null)
                 commit()
             }
+        }
+    }
+
+    private fun textForCategory() {
+        if(user.score in 0..50) {
+            binding.tvCurrentNameAqi.text = "Good"
+        } else if(user.score in 51..100){
+            binding.tvCurrentNameAqi.text = "Moderate"
+        } else if(user.score in 101..150) {
+            binding.tvCurrentNameAqi.text = "Unhealthy for sensitive group"
+        } else if(user.score in 151..200) {
+            binding.tvCurrentNameAqi.text = "Unhealthy"
+        } else if(user.score in 201..300) {
+            binding.tvCurrentNameAqi.text = "Very Unhealthy"
         }
     }
 

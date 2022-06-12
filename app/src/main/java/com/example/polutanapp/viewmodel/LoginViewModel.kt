@@ -44,14 +44,14 @@ class LoginViewModel(private val pref: UserPreference) : ViewModel() {
                         viewModelScope.launch {
                             pref.login()
                         }
-                        saveUser(UserModel(loginResponse!!.token,loginResponse.status, loginResponse.message))
+                        saveUser(UserModel(loginResponse!!.token,loginResponse.status, loginResponse.message,loginResponse.score))
                         login.value = Resource.Success(true)
                     } else {
                         Log.d("onFailure", response.message())
                     }
                 } else {
                     login.value = Resource.Error("Gagal!")
-                    saveUser(UserModel("",400,""))
+                    saveUser(UserModel("",400,"",0))
                 }
                 _isLoading.value = false
             }

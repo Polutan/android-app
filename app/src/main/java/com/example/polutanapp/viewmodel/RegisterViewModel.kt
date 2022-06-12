@@ -40,7 +40,7 @@ class RegisterViewModel(private val pref: UserPreference) : ViewModel() {
             ) {
                 if (response.isSuccessful) {
                     if (response.body() != null) {
-                        checker(UserModel("", 200, ""))
+                        checker(UserModel("", 200, "",0))
                         register.value = Resource.Success(true)
                     } else {
                         Log.d("onFailure", response.message())

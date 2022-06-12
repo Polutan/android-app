@@ -10,5 +10,9 @@ data class UserModel(
     val status: Int,
 
     @field:SerializedName("message")
-    val message: String
-)
+    val message: String,
+
+    @field:SerializedName("score")
+    val score: Int
+
+    )
