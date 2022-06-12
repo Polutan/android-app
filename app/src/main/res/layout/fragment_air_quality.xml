@@ -30,34 +30,22 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
             android:fontFamily="@font/roboto_light"
-            android:textColor="@color/black"
-            android:textSize="14sp"
+            android:textColor="?android:textColorPrimary"
+            android:textSize="18sp"
             app:layout_constraintStart_toEndOf="@+id/image_location"
             app:layout_constraintTop_toTopOf="@+id/image_location"
-            tools:text="@string/detail_current_location" />
+            android:text="@string/detail_current_location" />
 
-        <TextView
-            android:id="@+id/tv_district_location"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
-            android:fontFamily="@font/roboto_light"
-            android:textColor="@color/black"
-            android:textSize="12sp"
-            app:layout_constraintStart_toEndOf="@+id/image_location"
-            app:layout_constraintTop_toBottomOf="@+id/tv_detail_location"
-            tools:text="@string/district_current_location" />
 
         <View
             android:id="@+id/view_underline"
             android:layout_width="match_parent"
             android:layout_height="1dp"
             android:layout_marginStart="8dp"
-            android:layout_marginEnd="8dp"
-            android:layout_marginTop="8dp"
+            android:layout_marginTop="16dp"
             android:background="@color/gray_for_underline"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/tv_district_location" />
+            app:layout_constraintTop_toBottomOf="@+id/tv_detail_location" />
 
         <TextView
             android:id="@+id/tv_aqi_number"
@@ -78,7 +66,7 @@
             android:layout_height="wrap_content"
             android:fontFamily="@font/roboto_medium"
             android:text="@string/aqi"
-            android:textColor="@color/gray_2"
+            android:textColor="?android:textColorPrimary"
             android:layout_marginTop="32dp"
             app:layout_constraintStart_toEndOf="@+id/tv_aqi_number"
             app:layout_constraintTop_toTopOf="@+id/tv_aqi_number" />
@@ -88,7 +76,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             app:layout_constraintEnd_toEndOf="parent"
-            android:textColor="@color/gray_2"
+            android:textColor="?android:textColorPrimary"
             android:fontFamily="@font/roboto_medium"
             android:textSize="22sp"
             android:layout_marginTop="20dp"
@@ -96,28 +84,6 @@
             app:layout_constraintTop_toBottomOf="@+id/view_underline"
             tools:text="@string/current_name_aqi" />
 
-        <TextView
-            android:id="@+id/tv_cardview_pm25"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:fontFamily="@font/roboto_reguler"
-            android:text="@string/pm25"
-            android:textColor="@color/gray_2"
-            android:textSize="14sp"
-            app:layout_constraintStart_toStartOf="@+id/tv_category_aqi"
-            app:layout_constraintTop_toBottomOf="@+id/tv_category_aqi" />
-
-        <TextView
-            android:id="@+id/tv_cardview_current_aqi"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:fontFamily="@font/roboto_reguler"
-            android:textColor="@color/gray_2"
-            android:textSize="14sp"
-            android:layout_marginStart="8sp"
-            app:layout_constraintStart_toEndOf="@+id/tv_cardview_pm25"
-            app:layout_constraintTop_toBottomOf="@+id/tv_category_aqi"
-            tools:text="@string/current_pm25" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 

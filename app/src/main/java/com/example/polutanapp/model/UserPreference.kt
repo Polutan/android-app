@@ -29,12 +29,6 @@ class UserPreference private constructor(private val dataStore: DataStore<Prefer
         }
     }
 
-    suspend fun savedScoreAQI(savedUser: SavedUser) {
-        dataStore.edit { preferences ->
-            preferences[SCORE_KEY] = savedUser.score
-        }
-    }
-
     suspend fun login() {
         dataStore.edit { preferences ->
             preferences[STATUS_KEY] = 200

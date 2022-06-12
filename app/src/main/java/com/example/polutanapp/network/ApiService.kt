@@ -24,7 +24,7 @@ interface ApiService {
 
     @GET("predict")
     fun getPredictData(
-        @Header("auth-token") token:String,
+        @Header("auth-token") token: String,
     ): Call<UserModel>
 
 }

@@ -24,6 +24,7 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="8dp"
             android:layout_marginTop="16dp"
+            android:backgroundTint="?android:textColorPrimary"
             android:src="@drawable/icon_city"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
@@ -35,11 +36,11 @@
             android:layout_marginStart="8dp"
             android:layout_marginTop="16dp"
             android:fontFamily="@font/roboto_medium"
-            android:textColor="@color/black"
+            android:text="@string/detail_current_location"
+            android:textColor="?android:textColorPrimary"
             android:textSize="15sp"
             app:layout_constraintStart_toEndOf="@+id/imageView"
-            app:layout_constraintTop_toTopOf="parent"
-            android:text="@string/detail_current_location" />
+            app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
             android:id="@+id/tv_time"

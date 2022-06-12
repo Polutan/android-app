@@ -31,7 +31,7 @@ class LoginViewModel(private val pref: UserPreference) : ViewModel() {
         login.value = Resource.Loading
         _isLoading.value = true
         val client = ApiConfig.getApiService().login(
-           email, password
+            email, password
         )
         client.enqueue(object : Callback<UserModel> {
             override fun onResponse(
@@ -44,14 +44,21 @@ class LoginViewModel(private val pref: UserPreference) : ViewModel() {
                         viewModelScope.launch {
                             pref.login()
                         }
-                        saveUser(UserModel(loginResponse!!.token,loginResponse.status, loginResponse.message,loginResponse.score))
+                        saveUser(
+                            UserModel(
+                                loginResponse!!.token,
+                                loginResponse.status,
+                                loginResponse.message,
+                                loginResponse.score
+                            )
+                        )
                         login.value = Resource.Success(true)
                     } else {
                         Log.d("onFailure", response.message())
                     }
                 } else {
                     login.value = Resource.Error("Gagal!")
-                    saveUser(UserModel("",400,"",0))
+                    saveUser(UserModel("", 400, "", 0))
                 }
                 _isLoading.value = false
             }

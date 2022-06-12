@@ -5,7 +5,6 @@ import androidx.lifecycle.*
 import com.example.polutanapp.model.UserModel
 import com.example.polutanapp.model.UserPreference
 import com.example.polutanapp.network.ApiConfig
-import com.example.polutanapp.response.SavedUser
 import kotlinx.coroutines.launch
 import retrofit2.Call
 import retrofit2.Callback
@@ -13,18 +12,11 @@ import retrofit2.Response
 
 class HomeViewModel(private val pref: UserPreference) : ViewModel() {
 
-    val listScore = MutableLiveData<Int>()
+    val listScore = MutableLiveData<ArrayList<UserModel>>()
 
     fun getUser(): LiveData<UserModel> {
         return pref.getUser().asLiveData()
     }
-
-//    fun saveAQIScore(savedUser: SavedUser){
-//        viewModelScope.launch {
-//            pref.savedScoreAQI(savedUser)
-//        }
-//
-//    }
 
     fun saveUser(user: UserModel) {
         viewModelScope.launch {
@@ -34,18 +26,29 @@ class HomeViewModel(private val pref: UserPreference) : ViewModel() {
 
     fun getScoreAQI(token: String) {
         val client = ApiConfig.getApiService().getPredictData(token)
-        client.enqueue(object : Callback<UserModel>{
+        client.enqueue(object : Callback<UserModel> {
             override fun onResponse(call: Call<UserModel>, response: Response<UserModel>) {
                 if (response.isSuccessful) {
                     val homeResponse = response.body()
 
-                    listScore.postValue(response.body()?.score)
+
                     if (homeResponse != null) {
-                        saveUser(UserModel(homeResponse.token,homeResponse.status,homeResponse.message,homeResponse.score))
+                        saveUser(
+                            UserModel(
+                                homeResponse.token,
+                                homeResponse.status,
+                                homeResponse.message,
+                                homeResponse.score
+                            )
+                        )
+//                        val helperArrayList = ArrayList<String>(4)
+//                        helperArrayList.add(homeResponse.token)
+//                        helperArrayList.add(homeResponse.status.toString())
+//                        helperArrayList.add(homeResponse.message)
+//                        helperArrayList.add(homeResponse.score.toString())
+//
+//                        listScore.postValue(helperArrayList)
                     }
-//                    if (homeResponse != null) {
-//                        saveAQIScore(SavedUser(homeResponse.password,homeResponse.nama,homeResponse.V,homeResponse.id,homeResponse.email,homeResponse.score))
-//                    }
                 }
             }
 
@@ -55,10 +58,9 @@ class HomeViewModel(private val pref: UserPreference) : ViewModel() {
         })
     }
 
-    fun getListScoreAQI(): LiveData<Int>{
+    fun getListScoreAQI(): LiveData<ArrayList<UserModel>> {
         return listScore
     }
-
 
 
 }
