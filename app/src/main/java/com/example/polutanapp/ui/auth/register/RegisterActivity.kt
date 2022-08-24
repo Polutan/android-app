@@ -1,4 +1,4 @@
-package com.example.polutanapp.ui
+package com.example.polutanapp.ui.auth.register
 
 import android.content.Context
 import android.content.Intent
@@ -18,9 +18,9 @@ import com.example.polutanapp.ViewModelFactory
 import com.example.polutanapp.databinding.ActivityRegisterBinding
 import com.example.polutanapp.model.UserModel
 import com.example.polutanapp.model.UserPreference
-import com.example.polutanapp.viewmodel.RegisterViewModel
 import androidx.datastore.preferences.core.Preferences
 import com.example.polutanapp.data.Resource
+import com.example.polutanapp.ui.auth.login.LoginActivity
 
 private val Context.dataStore: DataStore<Preferences> by preferencesDataStore(name = "settings")
 

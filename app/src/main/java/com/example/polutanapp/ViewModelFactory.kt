@@ -3,7 +3,11 @@ package com.example.polutanapp
 import androidx.lifecycle.ViewModel
 import com.example.polutanapp.model.UserPreference
 import androidx.lifecycle.ViewModelProvider
-import com.example.polutanapp.viewmodel.*
+import com.example.polutanapp.ui.auth.login.LoginViewModel
+import com.example.polutanapp.ui.auth.register.RegisterViewModel
+import com.example.polutanapp.ui.home.HomeViewModel
+import com.example.polutanapp.ui.setting.SettingViewModel
+import com.example.polutanapp.ui.splashscreen.SplashViewModel
 
 //import com.example.mystoryapp.models.UserPreference
 //import com.example.mystoryapp.repository.StoryRepository

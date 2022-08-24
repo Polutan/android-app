@@ -1,4 +1,4 @@
-package com.example.polutanapp.ui
+package com.example.polutanapp.ui.splashscreen
 
 import android.content.Context
 import android.content.Intent
@@ -16,8 +16,9 @@ import androidx.lifecycle.ViewModelProvider
 import com.example.polutanapp.R
 import com.example.polutanapp.ViewModelFactory
 import com.example.polutanapp.model.UserPreference
-import com.example.polutanapp.viewmodel.SettingViewModel
-import com.example.polutanapp.viewmodel.SplashViewModel
+import com.example.polutanapp.ui.HomeActivity
+import com.example.polutanapp.ui.auth.register.RegisterActivity
+import com.example.polutanapp.ui.setting.SettingViewModel
 
 private val Context.dataStore: DataStore<Preferences> by preferencesDataStore(name = "settings")
 

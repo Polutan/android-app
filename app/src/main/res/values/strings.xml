@@ -64,4 +64,5 @@
     <string name="title_log_out">Logout</string>
     <string name="reset_password">Reset Password</string>
     <string name="cancel">Cancel</string>
+    <string name="under_construction">This Feature is under construction</string>
 </resources>

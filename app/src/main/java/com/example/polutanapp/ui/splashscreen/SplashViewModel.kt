@@ -1,4 +1,4 @@
-package com.example.polutanapp.viewmodel
+package com.example.polutanapp.ui.splashscreen
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.ViewModel

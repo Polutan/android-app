@@ -1,4 +1,4 @@
-package com.example.polutanapp.ui
+package com.example.polutanapp.ui.airquality
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment

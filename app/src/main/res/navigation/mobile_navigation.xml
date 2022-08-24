@@ -7,19 +7,19 @@
 
     <fragment
         android:id="@+id/navigation_home"
-        android:name="com.example.polutanapp.ui.HomeFragment"
+        android:name="com.example.polutanapp.ui.home.HomeFragment"
         android:label="@string/title_home"
         tools:layout="@layout/fragment_home" />
 
     <fragment
         android:id="@+id/navigation_air_quality"
-        android:name="com.example.polutanapp.ui.AirQualityFragment"
+        android:name="com.example.polutanapp.ui.airquality.AirQualityFragment"
         android:label="@string/title_air_quality"
         tools:layout="@layout/fragment_air_quality" />
 
     <fragment
         android:id="@+id/navigation_about_us"
-        android:name="com.example.polutanapp.ui.AboutUsFragment"
+        android:name="com.example.polutanapp.ui.aboutus.AboutUsFragment"
         android:label="@string/title_about_us"
         tools:layout="@layout/fragment_about_us" />
 

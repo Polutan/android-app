@@ -4,23 +4,23 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    tools:context=".ui.InformationFragment"
-    android:fillViewport="true">
+    android:fillViewport="true"
+    tools:context=".ui.InformationFragment">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:background="@drawable/shape_information"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:background="@drawable/shape_information">
 
         <TextView
             android:id="@+id/tv_aqi_guide"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/aqi_guide"
             android:layout_marginTop="31dp"
-            android:textSize="23sp"
             android:fontFamily="@font/roboto_bold"
+            android:text="@string/aqi_guide"
             android:textColor="@color/gray_2"
+            android:textSize="23sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
@@ -29,9 +29,9 @@
             android:id="@+id/image_backspace"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:src="@drawable/icon_backspace"
-            android:layout_marginTop="6dp"
             android:layout_marginStart="16dp"
+            android:layout_marginTop="6dp"
+            android:src="@drawable/icon_backspace"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="@+id/tv_aqi_guide" />
 
@@ -39,9 +39,9 @@
             android:id="@+id/image_good"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:src="@drawable/icon_menu_one"
-            android:layout_marginTop="25dp"
             android:layout_marginStart="40dp"
+            android:layout_marginTop="25dp"
+            android:src="@drawable/icon_menu_one"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/image_backspace" />
 
@@ -49,11 +49,11 @@
             android:id="@+id/tv_good"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:fontFamily="@font/roboto_medium"
             android:text="@string/category_good"
             android:textColor="@color/black"
             android:textSize="14sp"
-            android:fontFamily="@font/roboto_medium"
-            android:layout_marginStart="32dp"
             app:layout_constraintStart_toEndOf="@+id/image_good"
             app:layout_constraintTop_toTopOf="@+id/image_good" />
 
@@ -81,9 +81,9 @@
             android:id="@+id/tv_moderate"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
             android:fontFamily="@font/roboto_medium"
             android:text="@string/category_moderate"
-            android:layout_marginStart="32dp"
             android:textColor="@color/black"
             android:textSize="14sp"
             app:layout_constraintStart_toEndOf="@+id/image_moderate"
@@ -113,10 +113,10 @@
             android:id="@+id/tv_unhealthy_for_sensitive_groups"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
             android:fontFamily="@font/roboto_medium"
             android:text="@string/category_unhealthy_for_sensitive_groups"
             android:textColor="@color/black"
-            android:layout_marginStart="32dp"
             android:textSize="14sp"
             app:layout_constraintStart_toEndOf="@+id/image_unhealthy_for_sensitive_groups"
             app:layout_constraintTop_toTopOf="@+id/image_unhealthy_for_sensitive_groups" />
@@ -145,10 +145,10 @@
             android:id="@+id/tv_unhealthy"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
             android:fontFamily="@font/roboto_medium"
             android:text="@string/category_unhealthy"
             android:textColor="@color/black"
-            android:layout_marginStart="32dp"
             android:textSize="14sp"
             app:layout_constraintStart_toEndOf="@+id/image_unhealthy"
             app:layout_constraintTop_toTopOf="@+id/image_unhealthy" />
@@ -177,10 +177,10 @@
             android:id="@+id/tv_very_unhealthy"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
             android:fontFamily="@font/roboto_medium"
             android:text="@string/category_very_unhealthy"
             android:textColor="@color/black"
-            android:layout_marginStart="32dp"
             android:textSize="14sp"
             app:layout_constraintStart_toEndOf="@+id/image_very_unhealthy"
             app:layout_constraintTop_toTopOf="@+id/image_very_unhealthy" />
@@ -190,7 +190,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:fontFamily="@font/roboto_reguler"
-            android:text="General public will be noticeably affected.\nSensitive group will experience reduced\nendurance in activies. These individuals\nshould remain indoors and restrict\nactivities."
+            android:text="General public will be noticeably affected.\nSensitive group will experience reduced\nendurance in activies. These individuals\nshould remain indoors and restrict\nactivities.\nloremloremlomreasdkllasdkjhasjkdhasjkdhajskdhashdkjahsjkdhjkashdkjahsjkdhasjkdhkajshdjkahskjkjasjkakjasdjksdajksadkjasdjkhadskjasdjkasdkjasdkjasdkj
+asdasdkjasjkdjkhasdkjhaskj"
             android:textColor="@color/black"
             app:layout_constraintStart_toStartOf="@+id/tv_very_unhealthy"
             app:layout_constraintTop_toBottomOf="@+id/tv_very_unhealthy" />

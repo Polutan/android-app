@@ -1,4 +1,4 @@
-package com.example.polutanapp.viewmodel
+package com.example.polutanapp.ui.auth.login
 
 import android.util.Log
 import androidx.lifecycle.*

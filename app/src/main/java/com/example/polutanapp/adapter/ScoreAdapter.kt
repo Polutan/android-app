@@ -56,7 +56,7 @@ class ScoreAdapter : RecyclerView.Adapter<ScoreAdapter.ScoreViewHolder>() {
     }
 
 
-    override fun getItemCount(): Int = 2
+    override fun getItemCount(): Int = 10
 
     override fun onBindViewHolder(holder: ScoreViewHolder, position: Int) {
         holder.bind(user = UserModel("eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MmExZDNhNWFiYWUzYTczM2M3MDQwNzkiLCJpYXQiOjE2NTUwMDUzMjl9.Xi8Po3JDcjfzo2NTaS7HI6-CMeIYyPNmaoGrAW4iEis",200,"Prediction Success!",87))

@@ -1,4 +1,4 @@
-package com.example.polutanapp.ui
+package com.example.polutanapp.ui.aboutus
 
 import android.content.Intent
 import android.os.Bundle
@@ -6,6 +6,8 @@ import android.view.*
 import androidx.fragment.app.Fragment
 import com.example.polutanapp.R
 import com.example.polutanapp.databinding.FragmentAboutUsBinding
+import com.example.polutanapp.ui.home.HomeFragment
+import com.example.polutanapp.ui.setting.SettingActivity
 
 
 class AboutUsFragment : Fragment() {

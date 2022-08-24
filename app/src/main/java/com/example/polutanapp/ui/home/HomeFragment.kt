@@ -1,4 +1,4 @@
-package com.example.polutanapp.ui
+package com.example.polutanapp.ui.home
 
 import android.content.Context
 import android.os.Bundle
@@ -17,7 +17,7 @@ import com.example.polutanapp.adapter.ScoreAdapter
 import com.example.polutanapp.databinding.FragmentHomeBinding
 import com.example.polutanapp.model.UserModel
 import com.example.polutanapp.model.UserPreference
-import com.example.polutanapp.viewmodel.HomeViewModel
+import com.example.polutanapp.ui.InformationFragment
 
 private val Context.dataStore: DataStore<Preferences> by preferencesDataStore(name = "settings")
 
